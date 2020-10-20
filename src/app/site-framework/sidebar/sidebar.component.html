@@ -1,0 +1,13 @@
+
+        
+<div class="side-bar">
+  <a class="list-group-item all-products"  href="products">View All Products</a>   
+
+  <div class="list-group" *ngFor=" let cat of CatList;let i=index " >
+
+    <a class="list-group-item"  href="/products/category/{{cat.id}}">{{ cat.categoryName }}</a>   
+
+  </div>
+
+</div>
+         
