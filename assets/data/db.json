@@ -1,7 +1,7 @@
 {
   "products": [
     {
-      "id": 1,
+      
       "name": "Casual TShirts",
       "productid": 4,
       "description": "The product is of high quality",
@@ -13,7 +13,7 @@
       "warranty": 2
     },
     {
-      "id": 2,
+     
       "name": "Other Shirts",
       "productid": 6,
       "description": "The product is of high quality",
@@ -25,7 +25,7 @@
       "warranty": 2
     },
     {
-      "id": 3,
+      
       "name": "Shoes",
       "productid": 5,
       "description": "The product is of high quality",
@@ -37,7 +37,7 @@
       "warranty": 2
     },
     {
-      "id": 4,
+     
       "name": "Other TShirts",
       "productid": 6,
       "description": "The product is of high quality",
