@@ -3,25 +3,28 @@
 
 <div class="container"> 
   
-  <h2 class="bg-success text-light p-2 rounded">Add new product</h2>
+  <h2 class="bg-success text-light p-2 rounded">Add new Item</h2>
   <form  #CreateForm="ngForm" (submit)="addNewContact(CreateForm)">
 
     <div class="form-row">
       <div class="form-group col-md-6">
         <label for="Name">Name</label>
-        <input type="text" name="Name" placeholder="example: Clife Ngobeni" ngModel class="form-control" id="input1">
+        <input type="text" name="Name" placeholder="example: Nike" ngModel class="required-input form-control" id="input1" #Name="ngModel" required>
+        <small #Name *ngIf="Name.touched && !Name.valid">product Name required*</small>
       </div>
   
       <div class="form-group col-md-6">
         <label for="description">Description</label>
-        <input type="text" ngModel name="description"  placeholder="add product description" class="form-control" id="input2">
+        <input type="text" ngModel name="description"  placeholder="add product description" #Description="ngModel" class="required-input form-control" id="input2" required>
+        <small #Name *ngIf="Description.touched && !Description.valid">description required*</small>
       </div>
     </div>
 
     <div class="form-row">
     <div class="form-group  col-md-6">
       <label for="CategoryId">CategoryId</label>
-      <input type="number" max="20" min="0" name="CategoryId" ngModel class="form-control" id="input3" placeholder="example: 12">
+      <input type="number" max="20" min="0" name="CategoryId" ngModel #Id="ngModel" class="required-input form-control" id="input3" placeholder="example: 12" required>
+      <small #Id *ngIf="Id.touched && !Id.valid">category ID required*</small>
     </div>
   
     <div class="form-group  col-md-6">
@@ -33,8 +36,10 @@
     <div class="form-row">
       <div class="form-group col-md-6">
         <label for="price">Price</label>
-        <input type="text" name="price"  placeholder="example: $34" ngModel class="form-control" id="input5">
+        <input type="text" name="price"  placeholder="example: $34" ngModel #price="ngModel" class="required-input form-control" id="input5" required>
+        <small #price *ngIf="price.touched && !price.valid">price required*</small>
       </div>
+
       <div class="form-group col-md-6">
         <label for="available">Is_available?</label>
         <select name="available" ngModel class="form-control">
@@ -47,9 +52,10 @@
     <div class="form-row">
       <div class="form-group col">
         <label for="price">Image Link</label>
-        <input type="text" name="link" placeholder="image link" ngModel class="form-control" id="input6">
+        <input type="text" name="link" placeholder="image link" ngModel #Image="ngModel" class="required-input form-control" id="input6" required>
+        <small #Image *ngIf="Image.touched && !Image.valid">image link required</small>
       </div>
     </div>
-    <button type="submit" class="btn btn-success">Add product</button>
+    <button type="submit" [disabled]="!CreateForm.valid" class="btn btn-success">Add Item</button>
   </form>
 </div>

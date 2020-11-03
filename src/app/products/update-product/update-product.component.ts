@@ -49,7 +49,10 @@ export class UpdateProductComponent implements OnInit {
     this.productService.viewProduct(this.productId).subscribe(data=>
       {
         this.productDetails=data;
+        console.log(data);
       });
+      
+
   }
 
 }

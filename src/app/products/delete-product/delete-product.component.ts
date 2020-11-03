@@ -15,25 +15,21 @@ export class DeleteProductComponent implements OnInit {
     private productService:ProductService) { }
 
 
-  deleteProduct(form)
+  
+  productId=0;
+ 
+  deleteProduct()
   {
     
     this.productService.deleteProduct(this.productId).subscribe(data=>{});
     
   }
 
-  productId=0;
-  proDetails:any;
-
+  
   ngOnInit(): void {
     this.activatedRoute.params.subscribe(data=>
       {
         this.productId=data.id;
-      });
-
-    this.productService.viewProduct(this.productId).subscribe(data=>
-      {
-        this.proDetails=data;
       });
   }
 

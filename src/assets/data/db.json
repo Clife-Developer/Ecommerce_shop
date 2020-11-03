@@ -1,18 +1,6 @@
 {
   "products": [
     {
-      "id": 1,
-      "name": "Casual TShirts",
-      "productid": 4,
-      "description": "The product is of high quality",
-      "productimg": "http://localhost:4200/assets/casual.jpg",
-      "price": "R200",
-      "is_available": true,
-      "rating": "2 stars",
-      "vendor_name": "Seller -1",
-      "warranty": 2
-    },
-    {
       "id": 2,
       "name": "Other Shirts",
       "productid": 6,
@@ -25,18 +13,6 @@
       "warranty": 2
     },
     {
-      "id": 3,
-      "name": "Shoes",
-      "productid": 5,
-      "description": "The product is of high quality",
-      "productimg": "http://localhost:4200/assets/shoes.jpg",
-      "price": "R270",
-      "is_available": true,
-      "rating": "4 stars",
-      "vendor_name": "Seller -1",
-      "warranty": 2
-    },
-    {
       "id": 4,
       "name": "Other TShirts",
       "productid": 6,
@@ -45,6 +21,42 @@
       "price": "R270",
       "is_available": true,
       "rating": "4 stars",
+      "vendor_name": "Seller -1",
+      "warranty": 2
+    },
+    {
+      "id": 5,
+      "name": "",
+      "productid": "",
+      "description": "",
+      "productimg": "",
+      "price": "",
+      "is_available": "",
+      "rating": "",
+      "vendor_name": "Seller -1",
+      "warranty": 2
+    },
+    {
+      "id": 6,
+      "name": "",
+      "productid": "",
+      "description": "",
+      "productimg": "https://cdn.childrensalon.com/media/catalog/product/cache/0/image/1000x1000/9df78eab33525d08d6e5fb8d27136e95/t/i/tiba-marl-black-holdall-baby-changing-bag-41cm-174217-f0e2f244866c7bb84ef37ecc3ee6058d7811e858.jpg",
+      "price": "$23",
+      "is_available": "",
+      "rating": "",
+      "vendor_name": "Seller -1",
+      "warranty": 2
+    },
+    {
+      "id": 7,
+      "name": "Clife Mhlongo",
+      "productid": 0,
+      "description": "this is quality",
+      "productimg": "https://drfashion.co.uk/eshop/6491-thickbox_default/mens-casual-polo-t-shirt-uk-size-thin-soft-cotton-blue-badge-clips-2095-t-shirts-polos.jpg",
+      "price": "$23",
+      "is_available": "",
+      "rating": "5",
       "vendor_name": "Seller -1",
       "warranty": 2
     }

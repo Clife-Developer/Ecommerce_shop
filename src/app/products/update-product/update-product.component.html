@@ -1,45 +1,60 @@
+
+
 <div class="container"> 
-    <h2 class="bg-primary text-light p-2 rounded">Update {{productDetails.name}}</h2>
-    <form  #updateForm="ngForm" (submit)="updateProduct(updateForm)">
-  
-      <div class="form-row">
-        <div class="form-group col-md-6">
-          <label for="Name">Name</label>
-          <input type="text" name="Name" placeholder="example: Clife Ngobeni" ngModel [(ngModel)]="productDetails.name" class="form-control" id="input1">
-        </div>
-    
-        <div class="form-group col-md-6">
-          <label for="description">Description</label>
-          <input type="text" ngModel name="description"  placeholder="add product description" class="form-control" id="input2">
-        </div>
+  <h2 class="bg-primary text-light p-2 rounded">Update Item</h2>
+  <form  #updateForm="ngForm" (submit)="updateProduct(updateForm)">
+
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="Name">Name</label>
+        <input type="text" name="Name" class="required-input form-control" id="input1" [(ngModel)]=" productDetails.name" #Name="ngModel" required>
+        <small #Name *ngIf="Name.touched && !Name.valid">item name required</small>
       </div>
   
-      <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="description">Description</label>
+        <input type="text" name="description" class="required-input form-control" id="input2" [(ngModel)]=" productDetails.description" #description="ngModel" required >
+        <small #description *ngIf="description.touched && !description.valid">description required</small>
+      </div>
+    </div>
+
+    
+    <div class="form-row">
       <div class="form-group  col-md-6">
         <label for="CategoryId">CategoryId</label>
-        <input type="number" max="20" min="0" [(ngModel)]="productDetails.productid" name="CategoryId" ngModel class="form-control" id="input3" placeholder="example: 12">
+        <input type="number"  name="CategoryId"  class="required-input form-control" id="input3" [(ngModel)]=" productDetails.productid" #id="ngModel" required>
+        <small #id *ngIf="id.touched && !id.valid">item id required</small>
       </div>
-    
-      <div class="form-group  col-md-6">
-        <label for="rating">Rating</label>
-         <input type="text" name="rating" ngModel class="form-control" id="input4" placeholder="example: 3 stars">
-       </div>
-      </div>
-    
-      <div class="form-row">
-        <div class="form-group col-md-6">
-          <label for="price">Price</label>
-          <input type="text" name="price"  placeholder="example: $34" ngModel class="form-control" id="input5">
-        </div>
-        <div class="form-group col-md-6">
-          <label for="available">Is_available?</label>
-          <select name="available" ngModel class="form-control">
-            <option value="">True</option>
-            <option value="">False</option>
-          </select>
-        </div>
-      </div>
-      <button type="submit" class="btn btn-primary">Update</button>
-    </form>
-  </div>
   
+    <div class="form-group  col-md-6">
+      <label for="rating">Rating</label>
+       <input type="text" name="rating" ngModel class="form-control" [(ngModel)]=" productDetails.rating" id="input4">
+     </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="price">Price</label>
+        <input type="text" name="price" class="required-input form-control" id="input5" [(ngModel)]=" productDetails.price" #price="ngModel" required>
+        <small #price *ngIf="price.touched && !price.valid">price required</small>
+      </div>
+
+      <div class="form-group col-md-6">
+        <label for="available">Is_available?</label>
+        <select name="available" ngModel class="form-control">
+          <option value="">True</option>
+          <option value="">False</option>
+        </select>
+      </div>
+    </div>
+
+      <div class="form-row">
+        <div class="form-group col">
+          <label for="price">Image Link</label>
+          <input type="text" name="link" class="required-input form-control" id="input6" [(ngModel)]=" productDetails.productimg" #link="ngModel" required>
+          <small #link *ngIf="link.touched && !link.valid">image link required</small>
+        </div>
+      </div>
+    <button type="submit" [disabled]="!updateForm.valid" class="btn btn-primary">Update</button>
+  </form>
+</div>
